@@ -16,9 +16,11 @@ The [`Service` class](SCDemo/Service.cs) contains the logic for the 3 API endpoi
 All methods have suboptimal implementations.
 It is your task to optimise this code.
 No changes are necessary outside the `Service` class.
+Think about concepts like the N+1 Problem and the Cartesian Explosion.
 
 Notes:
 - You can see the generated SQL queries by changing the log level of "Microsoft.EntityFrameworkCore" to "Information" in [appsettings.json](SCDemo/appsettings.json) (requires restarting the application).
+- For the `FlightPlans` endpoint: the dummy data is generated for the years 2020 through 2024.
 - For the `AirportDetailsForCountry` endpoint: use "Netherlands", as the demo data is constructed to have at least 50 planes with Schiphol as base airport.
 - For each request, statistics such as response time and database queries are logged automatically.
 - To simulate using a remote database, 10ms of artificial latency is added to each database query.
